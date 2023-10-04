@@ -44,7 +44,12 @@ public class ClientClass {
         String userInput;
             
         try {
-            while(!(userInput = stdIn.readLine()).equalsIgnoreCase("BYE")){
+            while(true){
+                userInput = stdIn.readLine();
+                if(userInput.equalsIgnoreCase("BYE")){
+                    out.println(userInput);
+                    break;
+                }
                 out.println(userInput);
                 System.out.println("Server: " + in.readLine());
             }

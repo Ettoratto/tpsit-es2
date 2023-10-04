@@ -25,9 +25,8 @@ public class ServerClass {
     public void connect() {
 
         try {
-
+            System.out.println("Waiting for connection...");
             client = server.accept();
-            server.close();
 
             in = new BufferedReader(new InputStreamReader(client.getInputStream()));
             out = new PrintWriter(client.getOutputStream(), true);
